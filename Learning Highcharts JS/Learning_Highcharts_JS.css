@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 16px;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: #888;
+}
+
+.container{
+    width: 80vw;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5rem;
+}
+
+.chart{
+    border: 1px solid #777;
+    border-radius: 1rem;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
