@@ -16,10 +16,8 @@ export default function App() {
       <TreegraphChart/>
       <DependencyWheel/>
       <TreegraphBoxLayout/>
-      {/* <TiledWebMap/> */}
-
+      <TiledWebMap/>
       <MapWithMarkerClusters/>
-
     </>
   )
 };

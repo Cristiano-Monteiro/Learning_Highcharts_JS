@@ -1,22 +1,19 @@
 import { useState } from 'react';
 
-import * as Highcharts from 'highcharts';
+//import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-import Map from 'highcharts/modules/map';
-Map(Highcharts);
-
-import MakerCluster from 'highcharts/modules/marker-clusters';
-MakerCluster(Highcharts);
+import HighchartsMaps from 'highcharts/highmaps';
+import MarkerClustersChart from 'highcharts/modules/marker-clusters';
+MarkerClustersChart(HighchartsMaps);
 
 import ColorAxis from 'highcharts/modules/coloraxis';
-ColorAxis(Highcharts);
+ColorAxis(HighchartsMaps);
 
 export default function MapWithMarkerClusters(){
   const [chartOptions, setChartOptions] = useState({});
 
   async function fecthMapData(){
-
     const topology = await fetch(
       'https://code.highcharts.com/mapdata/custom/europe.topo.json'
       ).then(response => response.json());
@@ -138,7 +135,8 @@ export default function MapWithMarkerClusters(){
   return(
     <>
       <HighchartsReact
-        highcharts={Highcharts}
+        highcharts={HighchartsMaps}
+        constructorType={"mapChart"}
         options={chartOptions}
       />
     </>
